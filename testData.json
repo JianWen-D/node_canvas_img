@@ -1,0 +1,137 @@
+{
+  "bgSrc": "http://p7h3t1xnn.bkt.clouddn.com/1524209736842.png",
+  "isArr": true,
+  "data": [
+    [
+      {
+        "type": "img",
+        "src": "http://thirdwx.qlogo.cn/mmopen/hzVGicX27IG3Y0Ah1nwzB13ogzWv0eQVzSadT4u1RFXSOD3iauJXiaU9bicZ36zw8nPbu0hyBMrzEKAfibcVTc1DRz1D9P9ibSmokA/132",
+        "width": 140,
+        "top": 700,
+        "left": 600
+      },
+      {
+        "type": "text",
+        "text": "我们1",
+        "size": 200,
+        "top": 300,
+        "left": 300
+      }
+    ],
+    [
+      {
+        "type": "img",
+        "src": "http://thirdwx.qlogo.cn/mmopen/hzVGicX27IG3Y0Ah1nwzB13ogzWv0eQVzSadT4u1RFXSOD3iauJXiaU9bicZ36zw8nPbu0hyBMrzEKAfibcVTc1DRz1D9P9ibSmokA/132",
+        "width": 140,
+        "top": 700,
+        "left": 600
+      },
+      {
+        "type": "text",
+        "text": "我们2",
+        "size": 200,
+        "top": 300,
+        "left": 300
+      }
+    ]
+  ]
+}
+{
+  "bgSrc": "http://cdn.ystcsrz-gd.com/card.jpg",
+  "isArr": false,
+  "data": [
+    {
+      "type": "text",
+      "text": "毛帅帅",
+      "size": 38,
+      "top": 740,
+      "left": 400
+    },
+    {
+      "type": "text",
+      "text": "000000000001",
+      "size": 38,
+      "top": 870,
+      "left": 350
+    },
+    {
+      "type": "text",
+      "text": "美术类硬笔书法",
+      "size": 38,
+      "top": 990,
+      "left": 350
+    },
+    {
+      "type": "text",
+      "text": "1级",
+      "size": 38,
+      "top": 1110,
+      "left": 450
+    },
+    {
+      "type": "text",
+      "text": "05",
+      "size": 38,
+      "top": 1245,
+      "left": 350
+    },
+    {
+      "type": "text",
+      "text": "05",
+      "size": 38,
+      "top": 1245,
+      "left": 530
+    },
+    {
+      "type": "text",
+      "text": "05",
+      "size": 38,
+      "top": 1345,
+      "left": 350
+    },
+    {
+      "type": "text",
+      "text": "05",
+      "size": 38,
+      "top": 1345,
+      "left": 530
+    },
+    {
+      "type": "text",
+      "text": "佛山",
+      "size": 38,
+      "top": 1450,
+      "left": 320
+    },
+    {
+      "type": "text",
+      "text": "南海",
+      "size": 38,
+      "top": 1450,
+      "left": 500
+    },
+    {
+      "type": "text",
+      "text": "薄膜唐书画院",
+      "size": 38,
+      "top": 1550,
+      "left": 250
+    },
+    {
+      "type": "img",
+      "src": "http://system.ystcsrz-gd.com/system/public/candidatePhoto/5b37b5b90dea2.jpg",
+      "width": 280,
+      "height": 380,
+      "top": 720,
+      "left": 770
+    },
+    {
+      "type": "img",
+      "src": "http://cdn.ystcsrz-gd.com/zhang.png",
+      "width": 400,
+      "height": 400,
+      "top": 900,
+      "left": 500
+    }
+  ]
+}
