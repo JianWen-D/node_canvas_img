@@ -51,7 +51,7 @@ module.exports = fileName => {
 
   archive.pipe(output);
 
-  // archive.directory(path.join(__dirname, `./../public/images/${fileName}`), false);
+  archive.directory(path.join(__dirname, `./../public/images/${fileName}`), false);
 
   archive.finalize();
 

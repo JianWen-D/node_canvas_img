@@ -12,10 +12,10 @@ class canvasImg extends Controller {
     const isArr = this.ctx.request.body.isArr;
     const bgSrc = this.ctx.request.body.bgSrc;
     const data = this.ctx.request.body.data;
-    const zip = this.ctx.request.body.zip;
+    const isZip = this.ctx.request.body.zip;
     const fontFamily = this.ctx.request.body.fontFamily;
     const fileName = await canvasImgUtil.index(bgSrc, isArr, data, fontFamily);
-    const createZip = zip ? await zip(fileName) : fileName;
+    const createZip = isZip ? await zip(fileName) : fileName;
     this.ctx.body = createZip;
   }
 }

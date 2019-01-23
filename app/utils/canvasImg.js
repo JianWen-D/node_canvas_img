@@ -109,7 +109,7 @@ class canvasImg {
     ctx.drawImage(img, data.left, data.top, data.width, data.height);
   }
   async rotate(ctx, data) {
-    ctx.font = `${data.size}px Songtis`;
+    ctx.font = `${data.size}px newFonts`;
     ctx.translate(1055, -750);
     ctx.rotate(90 * Math.PI / 180);
     ctx.fillText(data.text, 2186, 100);
@@ -119,7 +119,7 @@ class canvasImg {
     if (data && data.rotate) {
       this.rotate(ctx, data);
     } else {
-      ctx.font = `${data.size}px ${fontFamily ? fontFamily : 'Microsoft YaHei'}`;
+      ctx.font = `${data.size}px ${fontFamily ? 'newFonts' : 'Microsoft YaHei'}`;
       ctx.fillText(data.text, data.left, data.top);
     }
   }
