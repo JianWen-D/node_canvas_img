@@ -7,36 +7,15 @@ const fs = require('fs');
 const path = require('path');
 
 class canvasImg {
-  async index(bgSrc, isArr, data, fontFamily) {
+  async index(bgSrc, data, fontFamily) {
     const fileName = Date.now();
     // 判断是否为图片组
-    if (isArr) {
-      for (const arr of data) {
-        const _ctx = await this.bgImg(bgSrc, fontFamily);
-        const ctx = _ctx.ctx;
-        const canvas = _ctx.canvas;
-        for (const item of arr) {
-          switch (item.type) {
-            case 'qrcode':
-              await this.qrcodeImg(ctx, item);
-              break;
-            case 'text':
-              await this.drawFont(ctx, item, fontFamily);
-              break;
-            case 'img':
-              await this.publicImg(ctx, item);
-              break;
-            default:
-              break;
-          }
-        }
-        await this.outputImgMerge(canvas, fileName);
-      }
-    } else {
+    // if (isArr) {
+    for (const arr of data) {
       const _ctx = await this.bgImg(bgSrc, fontFamily);
       const ctx = _ctx.ctx;
       const canvas = _ctx.canvas;
-      for (const item of data) {
+      for (const item of arr.dataList) {
         switch (item.type) {
           case 'qrcode':
             await this.qrcodeImg(ctx, item);
@@ -51,8 +30,9 @@ class canvasImg {
             break;
         }
       }
-      await this.outputImgMerge(canvas, fileName);
+      await this.outputImgMerge(canvas, arr.name, fileName);
     }
+    // }
     return fileName;
   }
   // 加载网络图片
@@ -110,7 +90,7 @@ class canvasImg {
   }
   async rotate(ctx, data) {
     ctx.font = `${data.size}px newFonts`;
-    ctx.translate(1055, -750);
+    ctx.translate(995, -750);
     ctx.rotate(90 * Math.PI / 180);
     ctx.fillText(data.text, 2186, 100);
   }
@@ -124,9 +104,9 @@ class canvasImg {
     }
   }
   // 输出整个合成图片
-  async outputImgMerge(canvas, fileName) {
-    const imgName = `${Date.now()}.jpg`;
-    return await this.createFile(imgName, canvas, fileName);
+  async outputImgMerge(canvas, imageName, fileName) {
+    // const imgName = `${imageName}.png`;
+    return await this.createFile(`${imageName}.png`, canvas, fileName);
   }
 }
 module.exports = new canvasImg();

@@ -9,14 +9,11 @@ class canvasImg extends Controller {
   async index() {
     // 判断是否为数组形式
     // 初始化数据
-    const isArr = this.ctx.request.body.isArr;
-    const bgSrc = this.ctx.request.body.bgSrc;
-    const data = this.ctx.request.body.data;
-    const isZip = this.ctx.request.body.zip;
-    const fontFamily = this.ctx.request.body.fontFamily;
-    const fileName = await canvasImgUtil.index(bgSrc, isArr, data, fontFamily);
-    const createZip = isZip ? await zip(fileName) : fileName;
-    this.ctx.body = createZip;
+    const { bgSrc, data, fontFamily } = this.ctx.request.body;
+    const result = await canvasImgUtil.index(bgSrc, data, fontFamily);
+    // const createZip = await zip(result);
+    // console.log(createZip, '111111');
+    this.ctx.body = result;
   }
 }
 

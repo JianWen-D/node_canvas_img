@@ -54,7 +54,6 @@ module.exports = fileName => {
   archive.directory(path.join(__dirname, `./../public/images/${fileName}`), false);
 
   archive.finalize();
-
   return `${fileName}.zip`;
 };
 

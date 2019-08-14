@@ -10,7 +10,6 @@ run/
 *.sw*
 *.un~
 app/public/zip/*
-app/public/fonts/*
 node_modules/*
 app/public/*.csv
 app/public/images/*
