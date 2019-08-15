@@ -7,7 +7,6 @@ const archiver = require('archiver');
 module.exports = fileName => {
   const output = fs.createWriteStream(path.join(__dirname, `./../public/zip/${fileName}.zip`));
   const deleteFolderRecursive = path => {
-    console.log(path);
     if (fs.existsSync(path)) {
       fs.readdirSync(path).forEach(function(file) {
         const curPath = path + '/' + file;

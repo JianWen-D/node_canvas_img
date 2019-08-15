@@ -7,8 +7,8 @@ const fs = require('fs');
 const path = require('path');
 
 class canvasImg {
-  async index(bgSrc, data, fontFamily) {
-    const fileName = Date.now();
+  async index(bgSrc, data, fontFamily, fileName) {
+    const _fileName = fileName ? fileName : Date.now();
     // 判断是否为图片组
     // if (isArr) {
     for (const arr of data) {
@@ -30,10 +30,10 @@ class canvasImg {
             break;
         }
       }
-      await this.outputImgMerge(canvas, arr.name, fileName);
+      await this.outputImgMerge(canvas, arr.name, _fileName);
     }
     // }
-    return fileName;
+    return _fileName;
   }
   // 加载网络图片
   loadImg(url) {
