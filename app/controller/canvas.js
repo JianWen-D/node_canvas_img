@@ -13,7 +13,11 @@ class canvasImg extends Controller {
     // 初始化数据
     const { bgSrc, data, fontFamily, fileName, update = true } = this.ctx.request.body;
     if (fs.existsSync(path.join(__dirname, `../public/zip/${fileName}.zip`)) && !update) {
-      this.ctx.body = `${fileName}.zip`;
+      this.ctx.body = {
+        code: 0,
+        data: `${fileName}.zip`,
+        msg: 'success',
+      };
       return;
     }
     const result = await canvasImgUtil.index(bgSrc, data, fontFamily, fileName);
