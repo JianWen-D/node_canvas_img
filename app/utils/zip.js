@@ -20,7 +20,9 @@ module.exports = fileName => {
     }
   };
   const archive = archiver('zip', {
-    zlib: { level: 5 }, // Sets the compression level.
+    zlib: {
+      level: 7,
+    }, // Sets the compression level.
   });
 
   output.on('close', function() {
@@ -37,9 +39,9 @@ module.exports = fileName => {
 
   archive.on('warning', function(err) {
     if (err.code === 'ENOENT') {
-    // log warning
+      // log warning
     } else {
-    // throw error
+      // throw error
       throw err;
     }
   });
@@ -55,4 +57,3 @@ module.exports = fileName => {
   archive.finalize();
   return `${fileName}.zip`;
 };
-
